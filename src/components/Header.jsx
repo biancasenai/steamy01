@@ -14,7 +14,7 @@ const Header = (props) => {
       <div id="info" className="d-flex gap-5 w-50 justify-content-between" >
         <div id="logo" role="button" className="d-flex align-items-center me-5" >
           <img
-          src="steamy01/src/img/logo.png"
+          src="Logo"
           alt="Logo"
           className="img-fluid"
           />
@@ -22,9 +22,9 @@ const Header = (props) => {
 
         <input
           type="text"
-          className="d-none d-md-block  buscar px-4 my-2 ms-5 "
+          className="d-none d-md-block  px-4 my-2 ms-5 text-light" 
           placeholder="O que seu pet precisa?"
-          style={{borderRadius: "80px",width: "400px", height: "40px", backgroundColor: "#00486633"}}
+          style={{borderRadius: "80px",width: "600px", height: "40px", backgroundColor: "#00486633", color: "#ffff"}}
         
         />
       </div>
@@ -84,17 +84,18 @@ const Header = (props) => {
           >
             <i className="bi bi-person-circle fs-3" style={{color:"#145C73"}}></i>
             <div className="d-none d-md-flex flex-column m-0 w-50" style={{color:"#145C73"}}>
-              <span className="h6 m-0">Olá, faça seu login ou cadastre-se</span>
+              <span className="h6 m-0">Login cadastrar-se</span>
             </div>
           </Link>
         )}
-    <i class="bi bi-telephone"></i>
+    <i class="bi bi-telephone fs-4" style={{color:"#145C73"}}></i>
         <div className="position-relative">
           <i
             role="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#carrinhoOffCanvas"
-            class="bi bi-bag"
+            class="bi bi-bag fs-4"
+            style={{color:"#145C73"}}
           ></i>
 
           {props.contadorJogos > 0 && (

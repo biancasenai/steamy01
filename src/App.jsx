@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import CarrinhoOffCanvas from "./components/CarrinhoOffCanvas";
+import inicial from "./img/logo.png";
 
 function App() {
   const [carrinhoItem, setCarrinhoItem] = useState([]);
