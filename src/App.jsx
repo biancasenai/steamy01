@@ -6,6 +6,7 @@ import inicio2 from "./img/Inicio2.png";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+
 import CarrinhoOffCanvas from "./components/CarrinhoOffCanvas";
 import inicial from "./img/logo.png";
 
@@ -65,7 +66,7 @@ const App = () => {
       <img
         src={inicio}
         alt=""
-        style={{ width: "2017px", height: "1000px" }}
+        style={{ width: "2513px", height: "1000px" }}
       />
 
       <div style={{ display: "flex", gap: "10px", margin: "20px" }}>
@@ -79,10 +80,55 @@ const App = () => {
       <img
         src={inicio2}
         alt=""
-        style={{ width: "2017px", height: "700px", marginTop: "900px" }}
+        style={{ width: "2513px", height: "1000px", marginTop: "100px" }}
       />
+  <button
+          onClick={() => navigate("/Cadastro")}
+          style={{
+            position: "absolute",
+            top: "240%",
+            left: "30%",
+            
+            padding: "25px 100px",
+            fontSize: "26px",
+            backgroundColor: "#C0DBEA",
+            color: "#fff",
+            border: "none",
+            borderRadius: "12px",
+            cursor: "pointer",
+          }}
+        >
+          Cadastrar-se
+        </button>
 
-
+  
+  <div
+      style={{
+        backgroundColor: "#9CD1EE", 
+        height: "50vh", 
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <button
+        onClick={() =>
+          window.open("https://wa.me/5511999999999", "_blank")
+        }
+        style={{
+          padding: "25px 100px",
+          marginTop:"-100px",
+          fontSize: "26px",
+          backgroundColor: "#FFA6CC",
+          color: "#ffffff",
+          border: "none",
+          borderRadius: "12px",
+          cursor: "pointer",
+        }}
+      >
+        Fale conosco pelo WhatsApp
+      </button>
+    </div>
       <CarrinhoOffCanvas
         onRemoveCarrinho={handleRemoveCarrinho}
         onUpdateCarrinho={handleUpdateCarrinho}
