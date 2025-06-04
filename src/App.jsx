@@ -5,6 +5,7 @@ import inicio from "./img/Inicio.png";
 import inicio2 from "./img/Inicio2.png";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Dog from "./img/Dog.png";
 
 import CarrinhoOffCanvas from "./components/CarrinhoOffCanvas";
 import inicial from "./img/logo.png";
