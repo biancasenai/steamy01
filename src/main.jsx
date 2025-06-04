@@ -14,6 +14,7 @@ import Cachorro from "./pages/Cachorro.jsx";
 import Roedores from "./pages/Roedores.jsx";
 import Aves from "./pages/Aves.jsx";
 import { formatarMoeda } from "./utils/formatters.js";
+import Footer from "./components/Footer.jsx";
 
 // Contexto global acessível a todas as rotas
 export const GlobalContext = createContext(null);
