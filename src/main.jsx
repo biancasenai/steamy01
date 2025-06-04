@@ -15,7 +15,7 @@ import Roedores from "./pages/Roedores.jsx";
 import Aves from "./pages/Aves.jsx";
 import Footer from "./components/Footer.jsx";
 import Cachorro from "./pages/Cachorro.jsx";
-import Produtos from "./components/Produtos.jsx";
+
 
 // Contexto global acessível a todas as rotas
 export const GlobalContext = createContext(null);
