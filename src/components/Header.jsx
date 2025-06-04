@@ -14,7 +14,7 @@ const Header = (props) => {
       <div id="info" className="d-flex gap-5 w-50 justify-content-between" >
         <div id="logo" role="button" className="d-flex align-items-center me-5" >
           <img
-          src="Logo"
+          src="./src/img/logo.png"
           alt="Logo"
           className="img-fluid"
           />
