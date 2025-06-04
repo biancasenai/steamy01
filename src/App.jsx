@@ -77,10 +77,54 @@ const App = () => {
       <img
         src={inicio2}
         alt=""
-        style={{ width: "2017px", height: "700px", marginTop: "900px" }}
+        style={{ width: "2017px", height: "700px", marginTop: "100px" }}
       />
+  <button
+          onClick={() => navigate("/Cadastro")}
+          style={{
+            position: "absolute",
+            top: "220%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            padding: "10px 20px",
+            fontSize: "16px",
+            backgroundColor: "#C0DBEA",
+            color: "#fff",
+            border: "none",
+            borderRadius: "5px",
+            cursor: "pointer",
+          }}
+        >
+          Cadastrar-se
+        </button>
 
-
+  {/* Fundo colorido após a imagem inicio2 */}
+  <div
+      style={{
+        backgroundColor: "#9CD1EE", 
+        height: "50vh", // Preenche o restante da tela
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <button
+        onClick={() =>
+          window.open("https://wa.me/5511999999999", "_blank")
+        }
+        style={{
+          padding: "25px 100px",
+          fontSize: "16px",
+          backgroundColor: "#FFA6CC",
+          color: "#ffffff",
+          border: "none",
+          borderRadius: "12px",
+          cursor: "pointer",
+        }}
+      >
+        Fale conosco pelo WhatsApp
+      </button>
+    </div>
       <CarrinhoOffCanvas
         onRemoveCarrinho={handleRemoveCarrinho}
         onUpdateCarrinho={handleUpdateCarrinho}
