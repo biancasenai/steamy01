@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import inicio from "./img/Inicio.png";
-import dog from "./img/DogInicio.png";
+import inicio2 from "./img/Inicio2.png";
 import Header from "./components/Header";
-import PaginaInicial from "./Gato.jsx/PaginaInicial";
+
 import CarrinhoOffCanvas from "./components/CarrinhoOffCanvas";
 
 function App() {
@@ -54,16 +54,13 @@ function App() {
   return (
     <>
       <Header contadorJogos={carrinhoItem.length} />
-      <img src={inicio} alt="" style={{ width: "2550px", height: "1000px" }} />
+      <img src={inicio} alt="" 
+      style={{ width: "2550px", height: "1000px"}}
+      />
 
-      {/* Adicionando 5 botões */}
-      <div style={{ margin: "170px" }}>
-        <button onClick={() => alert("Botão 1 clicado!")}>Botão 1</button>
-        <button onClick={() => alert("Botão 2 clicado!")}>Botão 2</button>
-        <button onClick={() => alert("Botão 3 clicado!")}>Botão 3</button>
-        <button onClick={() => alert("Botão 4 clicado!")}>Botão 4</button>
-      </div>
-
+      <img src={inicio2} alt="" 
+ style={{ width: "2550px", height: "551px",}}
+ />
       <CarrinhoOffCanvas
         onRemoveCarrinho={handleRemoveCarrinho}
         onUpdateCarrinho={handleUpdateCarrinho}
