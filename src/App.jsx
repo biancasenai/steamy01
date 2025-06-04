@@ -69,10 +69,12 @@ const App = () => {
       />
 
       <div style={{ display: "flex", gap: "10px", margin: "20px" }}>
-      <button  style={{width:"780px", height:"720px", borderRadius:"30px"}}   onClick={() => handleNavigation("/cachorro")}>Cachorro</button>
-        <button  style={{width:"420px",height:"370px",borderRadius:"30px"}}  onClick={() => handleNavigation("/aves")}>Aves</button>
-      <button  style={{width:"920px",height:"320px",borderRadius:"30px", marginTop:"400px",marginLeft:"-400px"}} onClick={() => handleNavigation("/gato")}>Gato</button>
-        <button  style={{width:"420px",height:"350px",borderRadius:"30px"}}  onClick={() => handleNavigation("/roedores")}>Roedores</button>
+      <button  style={{width:"780px", height:"720px", borderRadius:"30px",marginLeft:"130px"}}   onClick={() => handleNavigation("/cachorro")}>Cachorro</button>
+      <button  style={{width:"420px",height:"370px",borderRadius:"30px",marginLeft:"10px"}}  onClick={() => handleNavigation("/aves")}>Aves</button>
+
+      <button  style={{width:"800px",height:"320px",borderRadius:"30px", marginTop:"400px",marginLeft:"-430px"}} onClick={() => handleNavigation("/gato")}>Gato</button>
+
+      <button  style={{width:"420px",height:"370px",borderRadius:"30px",marginLeft:"-370px"}}  onClick={() => handleNavigation("/roedores")}>Roedores</button>
       </div>
       <img
         src={inicio2}
