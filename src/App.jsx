@@ -3,9 +3,8 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 import Header from "./components/Header";
-import Promotion from "./components/Promotion";
+import PaginaInicial from "./components/PaginaInicial";
 import CarrinhoOffCanvas from "./components/CarrinhoOffCanvas";
-import OutrosJogos from "./components/OutrosJogos";
 
 function App() {
   const [carrinhoItem, setCarrinhoItem] = useState([]);
@@ -55,16 +54,6 @@ function App() {
   return (
     <>
       <Header contadorJogos={carrinhoItem.length} />
-      <Promotion
-        onAddCarrinho={handleAddCarrinho} //adicionando o click para promoção
-      />
-
-      <CarrinhoOffCanvas
-        onRemoveCarrinho={handleRemoveCarrinho}
-        onUpdateCarrinho={handleUpdateCarrinho}
-        carrinhoItem={carrinhoItem}
-      />
-      <OutrosJogos />
     </>
   );
 }
