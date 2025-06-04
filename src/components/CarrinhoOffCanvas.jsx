@@ -84,7 +84,7 @@ const CarrinhoOffCanvas = (props) => {
                             props.onUpdateCarrinho(item, item.quantidade + 1)
                           }
                         >
-                          +
+                          
                         </button>
                       </div>
 
