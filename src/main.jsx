@@ -9,6 +9,10 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import App from "./App.jsx";
 import Login from "./pages/Login.jsx";
 import Checkout from "./pages/Checkout.jsx";
+import Gato from "./pages/Gato.jsx";
+import Cachorro from "./pages/Cachorro.jsx";
+import Roedores from "./pages/Roedores.jsx";
+import Aves from "./pages/Aves.jsx";
 import { formatarMoeda } from "./utils/formatters.js";
 
 // Contexto global acessível a todas as rotas

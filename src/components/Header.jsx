@@ -10,11 +10,11 @@ const Header = (props) => {
   }, []);
 
   return (
-    <header className="pt-4 w-100 navbar navbar-dark bg-dark justify-content-around align-items-center">
-      <div id="info" className="d-flex gap-5 w-50 justify-content-between">
-        <div id="logo" role="button" className="d-flex align-items-center me-5">
+    <header className="pt-4 w-100 navbar navbar justify-content-around align-items-center" style={{ backgroundColor: "#7FB0CB" }}>
+      <div id="info" className="d-flex gap-5 w-50 justify-content-between" >
+        <div id="logo" role="button" className="d-flex align-items-center me-5" >
           <img
-          src="steamy01/src/img/logo.png"
+          src="Logo"
           alt="Logo"
           className="img-fluid"
           />
@@ -22,8 +22,10 @@ const Header = (props) => {
 
         <input
           type="text"
-          className="w-100 d-none d-md-block border-0 rounded-1 buscar px-4 my-2 ms-5"
-          placeholder="Buscar..."
+          className="d-none d-md-block  px-4 my-2 ms-5 text-light" 
+          placeholder="O que seu pet precisa?"
+          style={{borderRadius: "80px",width: "600px", height: "40px", backgroundColor: "#00486633", color: "#ffff"}}
+        
         />
       </div>
 
@@ -80,19 +82,20 @@ const Header = (props) => {
             role="button"
             className="d-flex gap-3 justify-content-center align-items-center text-decoration-none text-light"
           >
-            <i className="bi bi-person-circle fs-3"></i>
-            <div className="d-none d-md-flex flex-column m-0 w-50">
-              <span className="h6 m-0">Olá, faça seu login ou cadastre-se</span>
+            <i className="bi bi-person-circle fs-3" style={{color:"#145C73"}}></i>
+            <div className="d-none d-md-flex flex-column m-0 w-50" style={{color:"#145C73"}}>
+              <span className="h6 m-0">Login cadastrar-se</span>
             </div>
           </Link>
         )}
-
+    <i class="bi bi-telephone fs-4" style={{color:"#145C73"}}></i>
         <div className="position-relative">
           <i
             role="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#carrinhoOffCanvas"
-            className="bi bi-cart4 text-light fs-2"
+            class="bi bi-bag fs-4"
+            style={{color:"#145C73"}}
           ></i>
 
           {props.contadorJogos > 0 && (

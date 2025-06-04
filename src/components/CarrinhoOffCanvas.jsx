@@ -28,7 +28,7 @@ const CarrinhoOffCanvas = (props) => {
       >
         <h5 className="offcanvas-title">
           {" "}
-          <i className="bi bi-cart4 me-2 fs-4"></i>Carrinho
+          <i class="bi bi-bag"></i> Sacola
         </h5>
         <i
           role="button"

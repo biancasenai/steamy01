@@ -5,6 +5,7 @@ import inicio2 from "./img/Inicio2.png";
 import Header from "./components/Header";
 
 import CarrinhoOffCanvas from "./components/CarrinhoOffCanvas";
+import inicial from "./img/logo.png";
 
 function App() {
   const [carrinhoItem, setCarrinhoItem] = useState([]);
