@@ -13,7 +13,6 @@ import { formatarMoeda } from "./utils/formatters.js";
 import Gato from "./pages/Gato.jsx";
 import Roedores from "./pages/Roedores.jsx";
 import Aves from "./pages/Aves.jsx";
-import { formatarMoeda } from "./utils/formatters.js";
 import Footer from "./components/Footer.jsx";
 import Cachorro from "./pages/Cachorro.jsx";
 
