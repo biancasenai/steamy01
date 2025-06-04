@@ -9,12 +9,13 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import App from "./App.jsx";
 import Login from "./pages/Login.jsx";
 import Checkout from "./pages/Checkout.jsx";
+import { formatarMoeda } from "./utils/formatters.js";
 import Gato from "./pages/Gato.jsx";
-import Cachorro from "./pages/Cachorro.jsx";
 import Roedores from "./pages/Roedores.jsx";
 import Aves from "./pages/Aves.jsx";
 import { formatarMoeda } from "./utils/formatters.js";
 import Footer from "./components/Footer.jsx";
+import Cachorro from "./pages/Cachorro.jsx";
 
 // Contexto global acessível a todas as rotas
 export const GlobalContext = createContext(null);
@@ -27,6 +28,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/" element={<App />} />
           <Route path="/login" element={<Login />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/gato" element={<Gato/>} />
+          <Route path="/cachorro" element={<Cachorro/>} />
+          <Route path="/aves" element={<Aves />} />
+          <Route path="/roedores" element={<Roedores />} />
         </Routes>
       </BrowserRouter>
     </GlobalContext.Provider>
