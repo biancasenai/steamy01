@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-
 import "./App.css";
-
 import Header from "./components/Header";
 import PaginaInicial from "./components/PaginaInicial";
 import CarrinhoOffCanvas from "./components/CarrinhoOffCanvas";
@@ -54,6 +52,14 @@ function App() {
   return (
     <>
       <Header contadorJogos={carrinhoItem.length} />
+    
+
+      <CarrinhoOffCanvas
+        onRemoveCarrinho={handleRemoveCarrinho}
+        onUpdateCarrinho={handleUpdateCarrinho}
+        carrinhoItem={carrinhoItem}
+      />
+    
     </>
   );
 }
