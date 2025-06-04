@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 import "./App.css";
 import inicio from "./img/Inicio.png";
 import inicio2 from "./img/Inicio2.png";
@@ -7,8 +8,9 @@ import Header from "./components/Header";
 import CarrinhoOffCanvas from "./components/CarrinhoOffCanvas";
 import inicial from "./img/logo.png";
 
-function App() {
+const App = () => {
   const [carrinhoItem, setCarrinhoItem] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     localStorage.setItem("devcarrinho", JSON.stringify(carrinhoItem));
@@ -52,16 +54,32 @@ function App() {
     );
   };
 
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
+
   return (
     <>
       <Header contadorJogos={carrinhoItem.length} />
-      <img src={inicio} alt="" 
-      style={{ width: "2550px", height: "1000px"}}
+      <img
+        src={inicio}
+        alt=""
+        style={{ width: "2017px", height: "1000px" }}
       />
 
-      <img src={inicio2} alt="" 
- style={{ width: "2550px", height: "551px",}}
- />
+      <div style={{ display: "flex", gap: "10px", margin: "20px" }}>
+      <button  style={{width:"780px", height:"720px", borderRadius:"30px"}}   onClick={() => handleNavigation("/cachorro")}>Cachorro</button>
+        <button  style={{width:"420px",height:"370px",borderRadius:"30px"}}  onClick={() => handleNavigation("/aves")}>Aves</button>
+      <button  style={{width:"920px",height:"320px",borderRadius:"30px", marginTop:"400px",marginLeft:"-400px"}} onClick={() => handleNavigation("/gato")}>Gato</button>
+        <button  style={{width:"420px",height:"350px",borderRadius:"30px"}}  onClick={() => handleNavigation("/roedores")}>Roedores</button>
+      </div>
+      <img
+        src={inicio2}
+        alt=""
+        style={{ width: "2017px", height: "700px", marginTop: "900px" }}
+      />
+
+
       <CarrinhoOffCanvas
         onRemoveCarrinho={handleRemoveCarrinho}
         onUpdateCarrinho={handleUpdateCarrinho}
@@ -69,6 +87,6 @@ function App() {
       />
     </>
   );
-}
+};
 
 export default App;
