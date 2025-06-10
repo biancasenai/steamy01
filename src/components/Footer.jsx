@@ -29,7 +29,7 @@ const Footer = () => {
             marginRight: "-380px", 
             display: "flex", 
             flexDirection: "column",
-            alignItems: "flex-end", // Alinha os elementos à direita
+            alignItems: "flex-end", 
             gap: "20px", 
             marginTop: "50px" 
           }}

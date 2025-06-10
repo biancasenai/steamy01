@@ -82,24 +82,30 @@ const Header = (props) => {
             role="button"
             className="d-flex gap-3 justify-content-center align-items-center text-decoration-none text-light"
           >
-            <i className="bi bi-person-circle fs-3" style={{color:"#145C73"}}></i>
-            <div className="d-none d-md-flex flex-column m-0 w-50" style={{color:"#145C73"}}>
+            <i className="bi bi-person-circle fs-3" style={{ color: "#145C73" }}></i>
+            <div className="d-none d-md-flex flex-column m-0 w-50" style={{ color: "#145C73" }}>
               <span className="h6 m-0">Login cadastrar-se</span>
             </div>
           </Link>
         )}
         <div className="position-relative">
-    <i className="bi bi-telephone fs-4" style={{color:"#145C73"}}> 
-          
-      </i>
           <i
-  role="button"
-  data-bs-toggle="offcanvas"
-  data-bs-target="#carrinhoOffCanvas"
-  className="bi bi-bag fs-4"
-  style={{ color: "#145C73" }}
->
-</i>
+            className="bi bi-telephone fs-4"
+            style={{ color: "#145C73", cursor: "pointer" }}
+            onClick={() => {
+              const confirmCall = window.confirm("Deseja ligar para +55 14 99146-1508?");
+              if (confirmCall) {
+                window.location.href = "tel:+5514991461508";
+              }
+            }}
+          ></i>
+          <i
+            role="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#carrinhoOffCanvas"
+            className="bi bi-bag fs-4"
+            style={{ color: "#145C73" }}
+          ></i>
           {props.contadorJogos > 0 && (
             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
               {props.contadorJogos}
