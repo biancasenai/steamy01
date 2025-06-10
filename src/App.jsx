@@ -13,7 +13,6 @@ import Login from "./pages/Login";
 import Cadastro from "./pages/Cadastro";
 
 import CarrinhoOffCanvas from "./components/CarrinhoOffCanvas";
-import inicial from "./img/logo.png";
 
 const App = () => {
   const [carrinhoItem, setCarrinhoItem] = useState([]);
@@ -28,22 +27,22 @@ const App = () => {
     salvaCarrinho && setCarrinhoItem(JSON.parse(salvaCarrinho));
   }, []);
 
-  // console.log(localStorage.getItem("devcarrinho"));
+  // // console.log(localStorage.getItem("devcarrinho"));
 
-  const handleAddCarrinho = (produto) => {
-    setCarrinhoItem((itemAnterior) => {
-      const existe = itemAnterior.find((item) => item.id === produto.id);
-      if (existe) {
-        return itemAnterior.map((item) =>
-          item.id === produto.id
-            ? { ...item, quantidade: item.quantidade + 1 }
-            : item
-        );
-      } else {
-        return [...itemAnterior, { ...produto, quantidade: 1 }];
-      }
-    });
-  };
+  // const handleAddCarrinho = (produto) => {
+  //   setCarrinhoItem((itemAnterior) => {
+  //     const existe = itemAnterior.find((item) => item.id === produto.id);
+  //     if (existe) {
+  //       return itemAnterior.map((item) =>
+  //         item.id === produto.id
+  //           ? { ...item, quantidade: item.quantidade + 1 }
+  //           : item
+  //       );
+  //     } else {
+  //       return [...itemAnterior, { ...produto, quantidade: 1 }];
+  //     }
+  //   });
+  // };
 
   const handleRemoveCarrinho = (produto) => {
     setCarrinhoItem((itemAnterior) =>
