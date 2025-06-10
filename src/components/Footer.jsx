@@ -28,6 +28,33 @@ const Footer = () => {
         >
           nossas redes sociais
         </p>
+        <div 
+          style={{ 
+            display: "flex", 
+            justifyContent: "flex-end", 
+            gap: "20px", 
+            marginTop: "150px" 
+          }}
+        >
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <i
+              className="bi bi-facebook"
+              style={{ fontSize: "40px", color: "#46A2C8", cursor: "pointer" }}
+            ></i>
+          </a>
+          <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+            <i
+              className="bi bi-google"
+              style={{ fontSize: "40px", color: "#46A2C8", cursor: "pointer" }}
+            ></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <i
+              className="bi bi-instagram"
+              style={{ fontSize: "40px", color: "#46A2C8", cursor: "pointer" }}
+            ></i>
+          </a>
+        </div>
       </div>
     </footer>
   );
