@@ -147,7 +147,7 @@ const App = () => {
         }}
       >
         <button
-          onClick={() => window.open("https://wa.me/5511999999999", "_blank")}
+          onClick={() => window.open("https://wa.me/5514991451508", "_blank")}
           style={{
             padding: "25px 100px",
             marginTop: "-100px",
@@ -167,6 +167,10 @@ const App = () => {
         onUpdateCarrinho={handleUpdateCarrinho}
         carrinhoItem={carrinhoItem}
       />
+      {/* Outros componentes ou conteúdo */}
+      <div>
+        <Footer /> {/* Renderização do Footer */}
+      </div>
     </>
   );
 };
