@@ -68,9 +68,9 @@ const App = () => {
   return (
     <>
       <Header contadorJogos={carrinhoItem.length} />
-      <img src={inicio} alt="" style={{ width: "2017px", height: "1000px" }} />
+      <img src={inicio} alt="" style={{ width: "2513px", height: "1000px" }} />
 
-      <div style={{ display: "flex", gap: "10px", margin: "75px" }}>
+      <div style={{ display: "flex", gap: "10px", margin: "20px" }}>
         <button
           style={{
             width: "780px",
@@ -82,7 +82,6 @@ const App = () => {
         >
           Cachorro
         </button>
-
         <button
           style={{
             width: "420px",
@@ -123,9 +122,52 @@ const App = () => {
       <img
         src={inicio2}
         alt=""
-        style={{ width: "2017px", height: "700px", marginTop: "900px" }}
+        style={{ width: "2513px", height: "1000px", marginTop: "100px" }}
       />
+      <button
+        onClick={() => navigate("/Cadastro")}
+        style={{
+          position: "absolute",
+          top: "240%",
+          left: "30%",
 
+          padding: "25px 100px",
+          fontSize: "26px",
+          backgroundColor: "#C0DBEA",
+          color: "#fff",
+          border: "none",
+          borderRadius: "12px",
+          cursor: "pointer",
+        }}
+      >
+        Cadastrar-se
+      </button>
+
+      <div
+        style={{
+          backgroundColor: "#9CD1EE",
+          height: "50vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <button
+          onClick={() => window.open("https://wa.me/5511999999999", "_blank")}
+          style={{
+            padding: "25px 100px",
+            marginTop: "-100px",
+            fontSize: "26px",
+            backgroundColor: "#FFA6CC",
+            color: "#ffffff",
+            border: "none",
+            borderRadius: "12px",
+            cursor: "pointer",
+          }}
+        >
+          Fale conosco pelo WhatsApp
+        </button>
+      </div>
       <CarrinhoOffCanvas
         onRemoveCarrinho={handleRemoveCarrinho}
         onUpdateCarrinho={handleUpdateCarrinho}
