@@ -20,19 +20,25 @@ const CarrinhoOffCanvas = (props) => {
     <div
       id="carrinhoOffCanvas"
       className="offcanvas offcanvas-end"
-      style={{ background: "#364A63" }}
+      style={{ background: "#DBF2FE", width: "5000px" }} // Alterei a largura da aba
     >
       <div
-        className="offcanvas-header text-light"
-        style={{ background: "#1b2838" }}
+        className="offcanvas-header text-light d-flex justify-content-between align-items-center"
+        style={{ background: "#7FB0CB", padding: "1.5rem" }} // Aumentei o padding
       >
-        <h5 className="offcanvas-title">
-          <i className="bi bi-bag"></i> Sacola
+        <h5
+          className="offcanvas-title d-flex align-items-center gap-3"
+          style={{ fontSize: "20px" }} // Aumentei o tamanho do texto
+        >
+          <i className="bi bi-bag fs-2"></i> {/* Aumentei o tamanho do ícone */}
+          Sacola
         </h5>
         <i
           role="button"
-          className="ms-auto fs-2 p-0 m-0 bi bi-x"
-          data-bs-dismiss="offcanvas"
+          className="fs-3 p-0 m-0 bi bi-x" // Aumentei o tamanho do ícone de fechar
+          data-bs-dismiss="offcanvas" // Adicionado para fechar a aba
+          aria-label="Close" // Acessibilidade
+          onClick={props.onClose}
         ></i>
       </div>
 
