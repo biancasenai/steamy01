@@ -8,7 +8,12 @@ export const Roedores = () => {
       <img 
         src="./src/img/Roedores.png" 
         alt="Roedores" 
-        style={{ width: '100%', height: '1080px', display: 'block', marginBottom: '20px' }} 
+        style={{ width: '100%', height: '1050px', display: 'block', marginBottom: '20px' }} 
+      />
+      <img 
+        src="./src/img/RoedoresFim.png" 
+        alt="RoedoresFim" 
+        style={{ width: '100%', height: '1050px', display: 'block', marginTop: '20px' }} 
       />
     </div>
   );
