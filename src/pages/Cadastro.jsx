@@ -122,7 +122,7 @@ export const Cadastro = () => {
             color: "#fff",
             borderRadius: "8px",
             width: "300px",
-            marginLeft: "200px",
+            marginLeft: "170px",
           }}
         >
           CADASTRAR
