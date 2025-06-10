@@ -5,6 +5,12 @@ import inicio from "./img/Inicio.png";
 import inicio2 from "./img/Inicio2.png";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Gato from "./pages/Gato";
+import Roedores from "./pages/Roedores";
+import Aves from "./pages/Aves";
+import Cachorro from "./pages/Cachorro";
+import Login from "./pages/Login";
+import Cadastro from "./pages/Cadastro";
 
 import CarrinhoOffCanvas from "./components/CarrinhoOffCanvas";
 import inicial from "./img/logo.png";
