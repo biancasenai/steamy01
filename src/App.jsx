@@ -5,6 +5,12 @@ import inicio from "./img/Inicio.png";
 import inicio2 from "./img/Inicio2.png";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Gato from "./pages/Gato";
+import Roedores from "./pages/Roedores";
+import Aves from "./pages/Aves";
+import Cachorro from "./pages/Cachorro";
+import Login from "./pages/Login";
+import Cadastro from "./pages/Cadastro";
 
 import CarrinhoOffCanvas from "./components/CarrinhoOffCanvas";
 import inicial from "./img/logo.png";
@@ -62,26 +68,63 @@ const App = () => {
   return (
     <>
       <Header contadorJogos={carrinhoItem.length} />
-      <img
-        src={inicio}
-        alt=""
-        style={{ width: "2017px", height: "1000px" }}
-      />
+      <img src={inicio} alt="" style={{ width: "2017px", height: "1000px" }} />
 
-      <div style={{ display: "flex", gap: "10px", margin: "20px" }}>
-      <button  style={{width:"780px", height:"720px", borderRadius:"30px",marginLeft:"130px"}}   onClick={() => handleNavigation("/cachorro")}>Cachorro</button>
-      <button  style={{width:"420px",height:"370px",borderRadius:"30px",marginLeft:"10px"}}  onClick={() => handleNavigation("/aves")}>Aves</button>
+      <div style={{ display: "flex", gap: "10px", margin: "75px" }}>
+        <button
+          style={{
+            width: "780px",
+            height: "720px",
+            borderRadius: "30px",
+            marginLeft: "130px",
+          }}
+          onClick={() => handleNavigation("/cachorro")}
+        >
+          Cachorro
+        </button>
 
-      <button  style={{width:"800px",height:"320px",borderRadius:"30px", marginTop:"400px",marginLeft:"-430px"}} onClick={() => handleNavigation("/gato")}>Gato</button>
+        <button
+          style={{
+            width: "420px",
+            height: "370px",
+            borderRadius: "30px",
+            marginLeft: "10px",
+          }}
+          onClick={() => handleNavigation("/aves")}
+        >
+          Aves
+        </button>
 
-      <button  style={{width:"420px",height:"370px",borderRadius:"30px",marginLeft:"-370px"}}  onClick={() => handleNavigation("/roedores")}>Roedores</button>
+        <button
+          style={{
+            width: "800px",
+            height: "320px",
+            borderRadius: "30px",
+            marginTop: "400px",
+            marginLeft: "-430px",
+          }}
+          onClick={() => handleNavigation("/gato")}
+        >
+          Gato
+        </button>
+
+        <button
+          style={{
+            width: "420px",
+            height: "370px",
+            borderRadius: "30px",
+            marginLeft: "-370px",
+          }}
+          onClick={() => handleNavigation("/roedores")}
+        >
+          Roedores
+        </button>
       </div>
       <img
         src={inicio2}
         alt=""
         style={{ width: "2017px", height: "700px", marginTop: "900px" }}
       />
-
 
       <CarrinhoOffCanvas
         onRemoveCarrinho={handleRemoveCarrinho}
