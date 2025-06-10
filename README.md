@@ -1,47 +1,40 @@
-# 🎮 DevSteam
+# Vetsys🐾
 
-DevSteam é uma aplicação web inspirada na plataforma Steam, desenvolvida com **React + Vite**, que exibe uma loja de jogos com descrições detalhadas, imagens, preços, descontos e muito mais.
-
----
-
-## 🧰 Tecnologias utilizadas
-
-- ⚛️ [React](https://reactjs.org/)
-- ⚡ [Vite](https://vitejs.dev/)
-- 🎨 [Bootstrap 5](https://getbootstrap.com/)
-- 🧩 [Bootstrap Icons](https://icons.getbootstrap.com/)
-- 🔀 [React Router DOM](https://reactrouter.com/)
-
----
-
-## 📸 Preview
-
-<!-- > Adicione aqui imagens ou gifs da aplicação em funcionamento. -->
+Bem-vindo ao **Vetsys**, um site que combina o melhor dos mundos: produtos incríveis para seus pets! Com uma interface intuitiva e moderna, o Vetsys oferece uma experiência única para explorar e adquirir nossos produtos.
 
 ---
 
 ## 🚀 Funcionalidades
 
-- 🖼️ Exibição de jogos com imagem, descrição, preço e desconto.
-- 🔍 Navegação por páginas com React Router (ex: Home, Detalhes do Jogo).
-- 🛒 Simulação de carrinho de compras.
-- 📂 Organização por categorias (FPS, RPG, Aventura, etc.).
-- 💬 Página de detalhes com informações completas sobre o jogo.
+- **Página Inicial**: Descubra ofertas e promoções exclusivas.
+- **Categorias de Produtos**:
+  - 🐶 Produtos para Cachorros
+  - 🐱 Produtos para Gatos
+  - 🐦 Produtos para Aves
+  - 🐹 Produtos para Roedores
+- **Carrinho de Compras**: Adicione, remova e atualize itens com facilidade.
+- **Checkout**: Finalize sua compra com segurança.
+- **Login e Cadastro**: Crie sua conta ou faça login para uma experiência personalizada.
 
 ---
 
-## 🛠️ Instalação e uso
+## 🛠️ Tecnologias Utilizadas
 
-```bash
-# 1. Clone o repositório
-git clone https://github.com/seu-usuario/devsteam.git
+### Frontend
+- **React.js**: Framework para construção de interfaces dinâmicas.
+- **Vite**: Ferramenta de build rápida e moderna.
+- **Bootstrap**: Estilização responsiva e componentes prontos.
+- **CSS personalizado**: Para ajustes visuais únicos.
 
-# 2. Acesse a pasta
-cd devsteam
+### Backend
+- **C#**: Linguagem utilizada para a API.
+- **ASP.NET Core**: Framework para construção de APIs robustas e escaláveis.
 
-# 3. Instale as dependências
-npm install
+---
 
-# 4. Inicie o servidor de desenvolvimento
-npm run dev
-```
+## 🚀 Como Executar o Projeto Localmente
+
+### Frontend
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/devsteam.git
