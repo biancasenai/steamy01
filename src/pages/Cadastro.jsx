@@ -19,7 +19,10 @@ export const Cadastro = () => {
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
-        backgroundColor: "#f8f9fa",
+        backgroundColor: "#DBF2FE",
+        backgroundImage: "url('/src/img/Cadastro.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
       <form
@@ -28,14 +31,25 @@ export const Cadastro = () => {
           display: "flex",
           flexDirection: "column",
           gap: "20px",
-          width: "300px",
           padding: "20px",
+          height: "850px",
+          width: "700px",
           border: "1px solid #ddd",
-          borderRadius: "8px",
           backgroundColor: "#fff",
+          marginLeft: "705px",
         }}
       >
-        <h2 style={{ textAlign: "center", color: "#EE6CA4" }}>Cadastro</h2>
+        <h2
+          style={{
+            textAlign: "center",
+            color: "#000000",
+            fontFamily: "monospace",
+            marginTop: "50px",
+          }}
+        >
+          CADASTRO
+        </h2>
+
         <input
           type="email"
           placeholder="Email"
@@ -43,10 +57,13 @@ export const Cadastro = () => {
           onChange={(e) => setEmail(e.target.value)}
           className="form-control"
           style={{
-            height: "40px",
+            height: "60px",
             borderRadius: "8px",
             border: "1px solid #ddd",
-            padding: "10px",
+            padding: "20px",
+            marginTop: "100px",
+            width: "80%",
+            marginLeft: "50px",
           }}
         />
         <input
@@ -56,10 +73,12 @@ export const Cadastro = () => {
           onChange={(e) => setPassword(e.target.value)}
           className="form-control"
           style={{
-            height: "40px",
+            height: "60px",
             borderRadius: "8px",
             border: "1px solid #ddd",
             padding: "10px",
+            width: "80%",
+            marginLeft: "50px",
           }}
         />
         <input
@@ -69,10 +88,12 @@ export const Cadastro = () => {
           onChange={(e) => setTelefone(e.target.value)}
           className="form-control"
           style={{
-            height: "40px",
+            height: "60px",
             borderRadius: "8px",
             border: "1px solid #ddd",
             padding: "10px",
+            width: "80%",
+            marginLeft: "50px",
           }}
         />
         <input
@@ -82,26 +103,47 @@ export const Cadastro = () => {
           onChange={(e) => setCpf(e.target.value)}
           className="form-control"
           style={{
-            height: "40px",
+            height: "60px",
             borderRadius: "8px",
             border: "1px solid #ddd",
             padding: "10px",
+            width: "80%",
+            marginLeft: "50px",
           }}
         />
         <button
           type="submit"
-          className="btn btn w-100"
+          className="btn btn "
           style={{
-            backgroundColor: "#EE6CA4",
-            height: "40px",
+            backgroundColor: "#46A2C8",
+            height: "50px",
             fontFamily: "monospace",
             fontSize: "16px",
             color: "#fff",
             borderRadius: "8px",
+            width: "300px",
+            marginLeft: "200px",
           }}
         >
           CADASTRAR
         </button>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "20px",
+            marginTop: "10px",
+          }}
+        >
+          <i
+            className="bi bi-facebook"
+            style={{ fontSize: "40px", color: "#46A2C8" }}
+          ></i>
+          <i
+            className="bi bi-google"
+            style={{ fontSize: "40px", color: "#46A2C8" }}
+          ></i>
+        </div>
       </form>
     </div>
   );
