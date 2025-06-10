@@ -76,22 +76,62 @@ const App = () => {
             width: "780px",
             height: "720px",
             borderRadius: "30px",
-            marginLeft: "130px",
+            marginLeft: "250px",
+            backgroundImage: "url('./src/img/DogInicio.png')", 
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            color: "#B28914", 
+            fontSize: "30px", 
+            fontWeight: "bold", 
+            position: "relative",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            
           }}
           onClick={() => handleNavigation("/cachorro")}
         >
-          Cachorro
+
+<span
+    style={{
+      position: "absolute", 
+      top: "10px", 
+      right: "10px", 
+    }}
+  >
+          Cachorros
+          </span>
         </button>
+        
         <button
           style={{
             width: "420px",
             height: "370px",
             borderRadius: "30px",
             marginLeft: "10px",
+            backgroundImage: "url('./src/img/Ave.png')", 
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            color: "#6d53b7", 
+            fontSize: "30px",
+            fontWeight: "bold", 
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            position: "relative",
           }}
           onClick={() => handleNavigation("/aves")}
         >
+          <span
+    style={{
+      position: "absolute", 
+      top: "10px", 
+      right: "10px", 
+    }}
+  >
+
           Aves
+  </span>
         </button>
 
         <button
@@ -101,10 +141,28 @@ const App = () => {
             borderRadius: "30px",
             marginTop: "400px",
             marginLeft: "-430px",
+            backgroundImage: "url('./src/img/GatoBotao.png')", 
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            color: "#3969B1", 
+            fontSize: "30px", 
+            fontWeight: "bold",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            position: "relative",
           }}
           onClick={() => handleNavigation("/gato")}
         >
-          Gato
+         <span
+    style={{
+      position: "absolute", 
+      top: "10px", 
+      left: "10px", 
+    }}
+  >   
+          Gatos
+          </span>
         </button>
 
         <button
@@ -113,10 +171,29 @@ const App = () => {
             height: "370px",
             borderRadius: "30px",
             marginLeft: "-370px",
+            backgroundImage: "url('./src/img/RoedoresBotão.png')", 
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            color: "#FF6877", 
+            fontSize: "30px", 
+            fontWeight: "bold", 
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            position: "relative",
           }}
           onClick={() => handleNavigation("/roedores")}
         >
+          <span
+    style={{
+      position: "absolute", 
+      top: "10px", 
+      right: "10px", 
+    }}
+  >
+
           Roedores
+  </span>
         </button>
       </div>
       <img
@@ -133,13 +210,18 @@ const App = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          color: "#FFFFFF", 
+          fontSize: "30px", 
+          fontWeight: "bold", 
+          textAlign: "center",
+         
         }}
       >
         <button
           onClick={() => window.open("https://wa.me/5514991451508", "_blank")}
           style={{
             padding: "25px 100px",
-            marginTop: "-100px",
+            marginTop: "-300px",
             fontSize: "26px",
             backgroundColor: "#FFA6CC",
             color: "#ffffff",
@@ -156,9 +238,9 @@ const App = () => {
         onUpdateCarrinho={handleUpdateCarrinho}
         carrinhoItem={carrinhoItem}
       />
-      {/* Outros componentes ou conteúdo */}
+      
       <div>
-        <Footer /> {/* Renderização do Footer */}
+        <Footer /> 
       </div>
     </>
   );

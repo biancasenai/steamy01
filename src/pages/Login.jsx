@@ -8,7 +8,7 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (password&& email) {
+    if (password && email) {
       localStorage.setItem("devlogin", JSON.stringify({ password, email }));
 
       navigate("/");
@@ -103,7 +103,7 @@ const Login = () => {
               height: "50px",
               backgroundColor: "#ffffff",
               borderColor: "#1F2B4E",
-              BorderRadius: "10px",
+              borderRadius: "10px",
               color: "#1F2B4E",
             }}
             value={password}
@@ -144,24 +144,33 @@ const Login = () => {
                 marginTop: "10px",
               }}
             >
-              <i
-                className="bi bi-facebook"
-                style={{ fontSize: "40px", color: "#EE6CA4" }}
-              ></i>
-              <i
-                className="bi bi-google"
-                style={{ fontSize: "40px", color: "#EE6CA4" }}
-              ></i>
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i
+                  className="bi bi-facebook"
+                  style={{ fontSize: "40px", color: "#EE6CA4", cursor: "pointer" }}
+                ></i>
+              </a>
+              <a
+                href="https://www.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i
+                  className="bi bi-google"
+                  style={{ fontSize: "40px", color: "#EE6CA4", cursor: "pointer" }}
+                ></i>
+              </a>
             </div>
             <button
               className="btn btn w-50"
               style={{
-             
-              
                 fontFamily: "monospace",
                 fontSize: "20px",
                 color: "#EE6CA4",
-                
               }}
               onClick={() => navigate("/Cadastro")}
             >
