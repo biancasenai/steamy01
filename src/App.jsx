@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import React from "react";
+import Header from "./components/Header";
 import "./App.css";
 import inicio from "./img/Inicio.png";
 import inicio2 from "./img/Inicio2.png";
-import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Gato from "./pages/Gato";
 import Roedores from "./pages/Roedores";
@@ -12,7 +13,6 @@ import Cachorro from "./pages/Cachorro";
 import Login from "./pages/Login";
 import Cadastro from "./pages/Cadastro";
 
-import CarrinhoOffCanvas from "./components/CarrinhoOffCanvas";
 
 const App = () => {
   const [carrinhoItem, setCarrinhoItem] = useState([]);
@@ -167,11 +167,7 @@ const App = () => {
           Fale conosco pelo WhatsApp
         </button>
       </div>
-      <CarrinhoOffCanvas
-        onRemoveCarrinho={handleRemoveCarrinho}
-        onUpdateCarrinho={handleUpdateCarrinho}
-        carrinhoItem={carrinhoItem}
-      />
+
     </>
   );
 };
