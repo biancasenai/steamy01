@@ -76,16 +76,33 @@ const App = () => {
             width: "780px",
             height: "720px",
             borderRadius: "30px",
-            marginLeft: "130px",
+            marginLeft: "250px",
             backgroundImage: "url('./src/img/DogInicio.png')", 
             backgroundSize: "cover",
             backgroundPosition: "center",
+            color: "#B28914", 
+            fontSize: "30px", 
+            fontWeight: "bold", 
+            position: "relative",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
             
           }}
           onClick={() => handleNavigation("/cachorro")}
         >
+
+<span
+    style={{
+      position: "absolute", 
+      top: "10px", 
+      right: "10px", 
+    }}
+  >
           Cachorros
+          </span>
         </button>
+        
         <button
           style={{
             width: "420px",
@@ -95,10 +112,26 @@ const App = () => {
             backgroundImage: "url('./src/img/Ave.png')", 
             backgroundSize: "cover",
             backgroundPosition: "center",
+            color: "#6d53b7", 
+            fontSize: "30px",
+            fontWeight: "bold", 
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            position: "relative",
           }}
           onClick={() => handleNavigation("/aves")}
         >
+          <span
+    style={{
+      position: "absolute", 
+      top: "10px", 
+      right: "10px", 
+    }}
+  >
+
           Aves
+  </span>
         </button>
 
         <button
@@ -111,10 +144,25 @@ const App = () => {
             backgroundImage: "url('./src/img/GatoBotao.png')", 
             backgroundSize: "cover",
             backgroundPosition: "center",
+            color: "#3969B1", 
+            fontSize: "30px", 
+            fontWeight: "bold",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            position: "relative",
           }}
           onClick={() => handleNavigation("/gato")}
         >
+         <span
+    style={{
+      position: "absolute", 
+      top: "10px", 
+      left: "10px", 
+    }}
+  >   
           Gatos
+          </span>
         </button>
 
         <button
@@ -126,17 +174,26 @@ const App = () => {
             backgroundImage: "url('./src/img/RoedoresBotão.png')", 
             backgroundSize: "cover",
             backgroundPosition: "center",
-            color: "#FFFFFF", // Define a cor do texto
-    fontSize: "24px", // Define o tamanho do texto
-    fontWeight: "bold", // Torna o texto mais destacado
-    textAlign: "center", // Centraliza o texto
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
+            color: "#FF6877", 
+            fontSize: "30px", 
+            fontWeight: "bold", 
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            position: "relative",
           }}
           onClick={() => handleNavigation("/roedores")}
         >
+          <span
+    style={{
+      position: "absolute", 
+      top: "10px", 
+      right: "10px", 
+    }}
+  >
+
           Roedores
+  </span>
         </button>
       </div>
       <img
@@ -153,6 +210,11 @@ const App = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          color: "#FFFFFF", 
+          fontSize: "30px", 
+          fontWeight: "bold", 
+          textAlign: "center",
+         
         }}
       >
         <button
