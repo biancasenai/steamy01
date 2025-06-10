@@ -77,10 +77,14 @@ const App = () => {
             height: "720px",
             borderRadius: "30px",
             marginLeft: "130px",
+            backgroundImage: "url('./src/img/DogInicio.png')", 
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            
           }}
           onClick={() => handleNavigation("/cachorro")}
         >
-          Cachorro
+          Cachorros
         </button>
         <button
           style={{
@@ -88,6 +92,9 @@ const App = () => {
             height: "370px",
             borderRadius: "30px",
             marginLeft: "10px",
+            backgroundImage: "url('./src/img/Ave.png')", 
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
           onClick={() => handleNavigation("/aves")}
         >
@@ -101,10 +108,13 @@ const App = () => {
             borderRadius: "30px",
             marginTop: "400px",
             marginLeft: "-430px",
+            backgroundImage: "url('./src/img/GatoBotao.png')", 
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
           onClick={() => handleNavigation("/gato")}
         >
-          Gato
+          Gatos
         </button>
 
         <button
@@ -113,6 +123,16 @@ const App = () => {
             height: "370px",
             borderRadius: "30px",
             marginLeft: "-370px",
+            backgroundImage: "url('./src/img/RoedoresBotão.png')", 
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            color: "#FFFFFF", // Define a cor do texto
+    fontSize: "24px", // Define o tamanho do texto
+    fontWeight: "bold", // Torna o texto mais destacado
+    textAlign: "center", // Centraliza o texto
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
           }}
           onClick={() => handleNavigation("/roedores")}
         >
@@ -156,9 +176,9 @@ const App = () => {
         onUpdateCarrinho={handleUpdateCarrinho}
         carrinhoItem={carrinhoItem}
       />
-      {/* Outros componentes ou conteúdo */}
+      
       <div>
-        <Footer /> {/* Renderização do Footer */}
+        <Footer /> 
       </div>
     </>
   );
