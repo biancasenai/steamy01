@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router"; // Corrigido
+import { Link, useNavigate } from "react-router-dom"; // Adicionado useNavigate
 import logo from "../img/logo.png"; // Importando a imagem como módulo
 
 const Header = (props) => {
   const [usuario, setUsuario] = useState(null);
+  const navigate = useNavigate(); // Hook para navegação
 
   useEffect(() => {
     const salvaUsuario = localStorage.getItem("devlogin");
@@ -100,10 +101,9 @@ const Header = (props) => {
           <i className="bi bi-telephone fs-4" style={{ color: "#145C73" }}></i>
           <i
             role="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#carrinhoOffCanvas"
+            onClick={() => navigate("/carrinho")} // Redireciona para a página CarrinhoPage
             className="bi bi-bag fs-4"
-            style={{ color: "#145C73" }}
+            style={{ color: "#145C73", cursor: "pointer" }}
           ></i>
           {props.contadorJogos > 0 && (
             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">

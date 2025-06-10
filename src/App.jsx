@@ -12,9 +12,11 @@ import Aves from "./pages/Aves";
 import Cachorro from "./pages/Cachorro";
 import Login from "./pages/Login";
 import Cadastro from "./pages/Cadastro";
+import CarrinhoPage from "./pages/CarrinhoPage";
 
 
 const App = () => {
+  
   const [carrinhoItem, setCarrinhoItem] = useState([]);
   const navigate = useNavigate();
 
