@@ -124,24 +124,7 @@ const App = () => {
         alt=""
         style={{ width: "2513px", height: "1000px", marginTop: "100px" }}
       />
-      <button
-        onClick={() => navigate("/Cadastro")}
-        style={{
-          position: "absolute",
-          top: "240%",
-          left: "30%",
-
-          padding: "25px 100px",
-          fontSize: "26px",
-          backgroundColor: "#C0DBEA",
-          color: "#fff",
-          border: "none",
-          borderRadius: "12px",
-          cursor: "pointer",
-        }}
-      >
-        Cadastrar-se
-      </button>
+     
 
       <div
         style={{

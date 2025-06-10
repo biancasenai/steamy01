@@ -172,9 +172,9 @@ const Login = () => {
                 fontSize: "20px",
                 color: "#EE6CA4",
               }}
-              onClick={() => navigate("/CriarConta")}
+              onClick={() => navigate("/Cadastro")}
             >
-              CRIAR CONTA
+              CADASTRAR-SE
             </button>
           </div>
         </div>
