@@ -73,7 +73,7 @@ const App = () => {
       <div style={{ display: "flex", gap: "10px", margin: "20px" }}>
         <button
           style={{
-            width: "780px",
+            width: "810px",
             height: "720px",
             borderRadius: "30px",
             marginLeft: "250px",
@@ -105,7 +105,7 @@ const App = () => {
         
         <button
           style={{
-            width: "420px",
+            width: "520px",
             height: "370px",
             borderRadius: "30px",
             marginLeft: "10px",
@@ -167,7 +167,7 @@ const App = () => {
 
         <button
           style={{
-            width: "420px",
+            width: "520px",
             height: "370px",
             borderRadius: "30px",
             marginLeft: "-370px",

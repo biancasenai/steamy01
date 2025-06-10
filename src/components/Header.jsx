@@ -88,7 +88,7 @@ const Header = (props) => {
             </div>
           </Link>
         )}
-        <div className="position-relative">
+        <div className="position-relative" style={{ display: "flex", gap: "20px" }}>
           <i
             className="bi bi-telephone fs-4"
             style={{ color: "#145C73", cursor: "pointer" }}
@@ -104,14 +104,14 @@ const Header = (props) => {
             data-bs-toggle="offcanvas"
             data-bs-target="#carrinhoOffCanvas"
             className="bi bi-bag fs-4"
-            style={{ color: "#145C73" }}
+            style={{ color: "#145C73", cursor: "pointer" }}
           ></i>
-          {props.contadorJogos > 0 && (
-            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              {props.contadorJogos}
-            </span>
-          )}
         </div>
+        {props.contadorJogos > 0 && (
+          <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            {props.contadorJogos}
+          </span>
+        )}
       </div>
     </header>
   );
