@@ -1,6 +1,6 @@
 import React, { createContext } from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -25,11 +25,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <GlobalContext.Provider value={{ formatarMoeda }}>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<App />} />
           <Route path="/carrinho" element={<App />} />
           <Route path="/login" element={<Login />} />
           <Route path="/checkout" element={<Checkout />} />
-          <Route path="/gato" element={<Gato/>} />
-          <Route path="/cachorro" element={<Cachorro/>} />
+          <Route path="/gato" element={<Gato />} />
+          <Route path="/cachorro" element={<Cachorro />} />
           <Route path="/aves" element={<Aves />} />
           <Route path="/roedores" element={<Roedores />} />
           <Route path="/cadastro" element={<Cadastro />} />
@@ -38,3 +39,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </GlobalContext.Provider>
   </React.StrictMode>
 );
+
+<div id="root"></div>

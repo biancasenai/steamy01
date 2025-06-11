@@ -1,21 +1,32 @@
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom"; // Adicionado useNavigate
-import logo from "../img/logo.png"; // Importando a imagem como módulo
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = (props) => {
   const [usuario, setUsuario] = useState(null);
   const navigate = useNavigate(); // Hook para navegação
 
   useEffect(() => {
-    const salvaUsuario = localStorage.getItem("devlogin");
-    salvaUsuario && setUsuario(JSON.parse(salvaUsuario));
+    const usuarioLogado = JSON.parse(localStorage.getItem("usuario"));
+    if (usuarioLogado) {
+      setUsuario(usuarioLogado);
+    }
   }, []);
+
+  const handleSacolaClick = () => {
+    navigate("/carrinho"); // Redireciona para a página do carrinho
+  };
 
   return (
     <header className=" w-100 navbar navbar justify-content-around align-items-center" 
     style={{ backgroundColor: "#7FB0CB" }}>
-      <div id="info" className="d-flex gap-5 w-50 justify-content-between" >
-        <div id="logo" role="button" className="d-flex align-items-center me-5" >
+      
+      {/* ------------logo e barra de pesquisa */}
+      <div id="info" 
+      className="d-flex gap-5 w-50 justify-content-between" >
+        <div 
+        id="logo"
+        role="button" 
+        className="d-flex align-items-center me-5" >
           <img
           src="./src/img/logo.png"
           alt="Logo"
@@ -31,14 +42,19 @@ const Header = (props) => {
             width: "600px", 
             height: "40px", 
             backgroundColor: "#00000033", }}
-        
-        />
+            
+            />
       </div>
+            {/* ----------------------------------------------- */}
 
-      <div id="carrinho" className="d-flex align-items-center gap-3">
+      <div 
+      id="carrinho" 
+      className="d-flex align-items-center gap-3">
         {usuario ? (
-          <span className="d-flex align-items-center gap-2 me-0 me-md-5">
-            <span className="d-none d-md-block">
+          <span 
+          className="d-flex align-items-center gap-2 me-0 me-md-5">
+            <span
+             className="d-none d-md-block">
               Olá, {usuario.nome.split(" ")[0]}!{" "}
             </span>
             <div className="dropdown">
@@ -50,13 +66,13 @@ const Header = (props) => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <img
+                {/* <img
                   src={`https://ui-avatars.com/api/?name=${usuario.nome}&background=2b87ae&color=fff`}
                   alt={usuario.nome}
                   className="rounded-circle"
                   width="40"
                   height="40"
-                />
+                /> */}
               </div>
               <ul
                 className="dropdown-menu dropdown-menu-dark dropdown-menu-end"
@@ -97,8 +113,7 @@ const Header = (props) => {
             <i className="bi bi-telephone fs-4" style={{ color: "#145C73" }}></i>
             <i
               role="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#carrinhoOffCanvas"
+              onClick={handleSacolaClick} // Chama a função para redirecionar
               className="bi bi-bag fs-4"
               style={{ color: "#145C73" }}
             ></i>

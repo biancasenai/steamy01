@@ -14,9 +14,7 @@ import Login from "./pages/Login";
 import Cadastro from "./pages/Cadastro";
 import CarrinhoPage from "./pages/CarrinhoPage";
 
-
 const App = () => {
-  
   const [carrinhoItem, setCarrinhoItem] = useState([]);
   const navigate = useNavigate();
 
@@ -28,23 +26,6 @@ const App = () => {
     const salvaCarrinho = localStorage.getItem("devcarrinho");
     salvaCarrinho && setCarrinhoItem(JSON.parse(salvaCarrinho));
   }, []);
-
-  // // console.log(localStorage.getItem("devcarrinho"));
-
-  // const handleAddCarrinho = (produto) => {
-  //   setCarrinhoItem((itemAnterior) => {
-  //     const existe = itemAnterior.find((item) => item.id === produto.id);
-  //     if (existe) {
-  //       return itemAnterior.map((item) =>
-  //         item.id === produto.id
-  //           ? { ...item, quantidade: item.quantidade + 1 }
-  //           : item
-  //       );
-  //     } else {
-  //       return [...itemAnterior, { ...produto, quantidade: 1 }];
-  //     }
-  //   });
-  // };
 
   const handleRemoveCarrinho = (produto) => {
     setCarrinhoItem((itemAnterior) =>
@@ -68,173 +49,56 @@ const App = () => {
 
   return (
     <>
-      <Header contadorJogos={carrinhoItem.length} />
-      <img src={inicio} alt="" style={{ width: "2513px", height: "1000px" }} />
+      {/* --------------------------------------imagem pagina inicial */}
+      <Header
+        contadorJogos={carrinhoItem.length}
+        style={{
+          margin: "0", // Remove margens externas
+          padding: "0", // Remove paddings internos
+          boxSizing: "border-box", // Garante o cálculo correto do tamanho
+        }}
+      />
+      <img
+        src={inicio}
+        alt=""
+        style={{
+          width: "100%", // Ajusta a largura para ocupar toda a tela
+          height: "auto", // Mantém a proporção da imagem
+        }}
+      />
 
-      <div style={{ display: "flex", gap: "10px", margin: "20px" }}>
+      {/* -------------------------------botões de navegação */}
+      <div
+        style={{
+          display: "flex",
+          gap: "10px",
+          marginTop: "200px",
+        }}
+      >
         <button
           style={{
             width: "810px",
             height: "720px",
             borderRadius: "30px",
             marginLeft: "250px",
-            backgroundImage: "url('./src/img/DogInicio.png')", 
+            backgroundImage: "url('./src/img/DogInicio.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
-            color: "#B28914", 
-            fontSize: "30px", 
-            fontWeight: "bold", 
+            color: "#B28914",
+            fontSize: "30px",
             position: "relative",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            
+            border: "none", // Remove o contorno preto
+            outline: "none", // Remove o contorno ao clicar
+            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)", // Adiciona uma sombra sutil
           }}
           onClick={() => handleNavigation("/cachorro")}
         >
-
-<span
-    style={{
-      position: "absolute", 
-      top: "10px", 
-      right: "10px", 
-    }}
-  >
           Cachorros
-          </span>
-        </button>
-        
-        <button
-          style={{
-            width: "520px",
-            height: "370px",
-            borderRadius: "30px",
-            marginLeft: "10px",
-            backgroundImage: "url('./src/img/Ave.png')", 
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            color: "#6d53b7", 
-            fontSize: "30px",
-            fontWeight: "bold", 
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            position: "relative",
-          }}
-          onClick={() => handleNavigation("/aves")}
-        >
-          <span
-    style={{
-      position: "absolute", 
-      top: "10px", 
-      right: "10px", 
-    }}
-  >
-
-          Aves
-  </span>
-        </button>
-
-        <button
-          style={{
-            width: "800px",
-            height: "320px",
-            borderRadius: "30px",
-            marginTop: "400px",
-            marginLeft: "-430px",
-            backgroundImage: "url('./src/img/GatoBotao.png')", 
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            color: "#3969B1", 
-            fontSize: "30px", 
-            fontWeight: "bold",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            position: "relative",
-          }}
-          onClick={() => handleNavigation("/gato")}
-        >
-         <span
-    style={{
-      position: "absolute", 
-      top: "10px", 
-      left: "10px", 
-    }}
-  >   
-          Gatos
-          </span>
-        </button>
-
-        <button
-          style={{
-            width: "520px",
-            height: "370px",
-            borderRadius: "30px",
-            marginLeft: "-370px",
-            backgroundImage: "url('./src/img/RoedoresBotão.png')", 
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            color: "#FF6877", 
-            fontSize: "30px", 
-            fontWeight: "bold", 
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            position: "relative",
-          }}
-          onClick={() => handleNavigation("/roedores")}
-        >
-          <span
-    style={{
-      position: "absolute", 
-      top: "10px", 
-      right: "10px", 
-    }}
-  >
-
-          Roedores
-  </span>
         </button>
       </div>
-      <img
-        src={inicio2}
-        alt=""
-        style={{ width: "2513px", height: "1000px", marginTop: "100px" }}
-      />
-     
-
-      <div
-        style={{
-          backgroundColor: "#9CD1EE",
-          height: "50vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          color: "#FFFFFF", 
-          fontSize: "30px", 
-          fontWeight: "bold", 
-          textAlign: "center",
-         
-        }}
-      >
-        <button
-          onClick={() => window.open("https://wa.me/5514991451508", "_blank")}
-          style={{
-            padding: "25px 100px",
-            marginTop: "-300px",
-            fontSize: "26px",
-            backgroundColor: "#FFA6CC",
-            color: "#ffffff",
-            border: "none",
-            borderRadius: "12px",
-            cursor: "pointer",
-          }}
-        >
-          Fale conosco pelo WhatsApp
-        </button>
-      </div>
-
     </>
   );
 };

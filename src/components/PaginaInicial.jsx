@@ -18,7 +18,7 @@ const PaginaInicial = (props) => {
     setAleatorio(aleatorioJogos);
   }, [games]);
 
-  // return (
+   return (
     <div id="promotion" className="container w-75 my-4">
       <div>
         {/* mapeando um array com react */}
