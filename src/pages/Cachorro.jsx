@@ -54,6 +54,7 @@ export const Cachorro = () => {
       <ul>
         {cachorros.map((cachorro, index) => (
           <li key={index}>
+            <img src="https://placehold.co/200" alt="" />
             <strong>Ração:</strong> {cachorro.racao} <br />
             <strong>Petisco:</strong> {cachorro.petisco} <br />
             <strong>Brinquedo:</strong> {cachorro.brinquedo} <br />
