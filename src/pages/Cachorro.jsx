@@ -37,7 +37,8 @@ export const Cachorro = () => {
           width: "100%",
           height: "1050px",
           display: "block",
-          marginBottom: "20px",
+          marginBottom: "50px",
+
         }}
       />
       <img
