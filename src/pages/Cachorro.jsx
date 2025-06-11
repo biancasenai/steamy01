@@ -37,8 +37,7 @@ export const Cachorro = () => {
           width: "100%",
           height: "1050px",
           display: "block",
-          marginBottom: "50px",
-
+          marginBottom: "20px",
         }}
       />
       <img
@@ -54,16 +53,7 @@ export const Cachorro = () => {
       <ul>
         {cachorros.map((cachorro, index) => (
           <li key={index}>
-            <img src="https://placehold.co/200" alt="" />
-            <strong>Ração:</strong> {cachorro.racao} <br />
-            <strong>Petisco:</strong> {cachorro.petisco} <br />
-            <strong>Brinquedo:</strong> {cachorro.brinquedo} <br />
-            <strong>Preço:</strong> R$ {cachorro.preco} <br />
-            <strong>Ingrediente ou Sabor:</strong> {cachorro.ingredienteOuSabor}{" "}
-            <br />
-            <strong>Descrição:</strong> {cachorro.descricao} <br />
-            <strong>Tamanho:</strong> {cachorro.tamanho} <br />
-            <strong>Idade:</strong> {cachorro.idade} <br />
+            {cachorro.nome} - {cachorro.raca}
           </li>
         ))}
       </ul>
