@@ -40,11 +40,6 @@ export const Cachorro = () => {
           marginBottom: "50px",
         }}
       />
-          height: "1050px",
-          display: "block",
-          marginBottom: "20px",
-        }}
-      />
       <img
         src="./src/img/CachorroFim.png"
         alt="CachorroFim"

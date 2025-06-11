@@ -8,15 +8,16 @@ const Produtos = () => {
       const dadosTotais = [];
 
       try {
-        const resProdutos = await fetch('https://localhost:7040/api/Produtos');
+        const resProdutos = await fetch('https://vetsys.somee.com/api/Produtos');
         if (resProdutos.ok) {
           const produtos = await resProdutos.json();
           dadosTotais.push(...produtos);
         }
-      } catch {}
+        
+      } catch(err) {}
 
       try {
-        const resItens = await fetch('https://localhost:7040/api/Itens');
+        const resItens = await fetch('https://vetsys.somee.com/api/Itens');
         if (resItens.ok) {
           const itens = await resItens.json();
           dadosTotais.push(...itens);

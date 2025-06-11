@@ -10,6 +10,28 @@ export const Cadastro = () => {
     e.preventDefault();
     console.log({ email, password, telefone, cpf });
     // Adicione aqui a lógica para enviar os dados ao servidor
+    // Por exemplo, usando fetch ou axios para enviar os dados para uma API
+    fetch("https://vetsys.somee.com/api/Users/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        senha: password,
+        telefone,
+        cpf,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+        // Redirecionar ou mostrar mensagem de sucesso
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        // Mostrar mensagem de erro
+      });
   };
 
   return (
