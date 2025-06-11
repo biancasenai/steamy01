@@ -17,6 +17,7 @@ import Footer from "./components/Footer.jsx";
 import Cachorro from "./pages/Cachorro.jsx";
 import Cadastro from "./pages/Cadastro.jsx";
 
+
 // Contexto global acessível a todas as rotas
 export const GlobalContext = createContext(null);
 
