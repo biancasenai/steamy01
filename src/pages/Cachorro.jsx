@@ -3,7 +3,7 @@ import Header from '../components/Header';
 
 export const Cachorro = () => {
   return (
-    <div>
+    <div style={{ margin: '0', padding: '0', boxSizing: 'border-box' }}>
       <Header />
       <img 
         src="./src/img/Cachorro.png" 
@@ -75,7 +75,7 @@ export const Cachorro = () => {
       <img 
         src="./src/img/CachorroFim.png" 
         alt="CachorroFim" 
-        style={{ width: '100%', height: '1050px', display: 'block', marginTop: '20px' }} 
+        style={{ width: '100%', height: '1350px', display: 'block', margin: '10' }} 
       />
     </div>
   );
