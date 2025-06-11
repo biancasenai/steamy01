@@ -29,6 +29,20 @@ export const Cachorro = () => {
           margin: "10",
         }}
       />
+      <ul>
+        {cachorros.map((cachorro, index) => (
+          <li key={index}>
+            {cachorro.nome} - {cachorro.raca}
+          </li>
+        ))}
+      </ul>
+      <ul>
+        {itens.map((item, index) => (
+          <li key={index}>
+            {item.nome} - {item.descricao}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
