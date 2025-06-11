@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import React from "react";
+import Header from "./components/Header";
 import "./App.css";
 import inicio from "./img/Inicio.png";
 import inicio2 from "./img/Inicio2.png";
-import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Gato from "./pages/Gato";
 import Roedores from "./pages/Roedores";
@@ -11,11 +12,11 @@ import Aves from "./pages/Aves";
 import Cachorro from "./pages/Cachorro";
 import Login from "./pages/Login";
 import Cadastro from "./pages/Cadastro";
+import CarrinhoPage from "./pages/CarrinhoPage";
 
-import CarrinhoOffCanvas from "./components/CarrinhoOffCanvas";
-import inicial from "./img/logo.png";
 
 const App = () => {
+  
   const [carrinhoItem, setCarrinhoItem] = useState([]);
   const navigate = useNavigate();
 
@@ -28,22 +29,22 @@ const App = () => {
     salvaCarrinho && setCarrinhoItem(JSON.parse(salvaCarrinho));
   }, []);
 
-  // console.log(localStorage.getItem("devcarrinho"));
+  // // console.log(localStorage.getItem("devcarrinho"));
 
-  const handleAddCarrinho = (produto) => {
-    setCarrinhoItem((itemAnterior) => {
-      const existe = itemAnterior.find((item) => item.id === produto.id);
-      if (existe) {
-        return itemAnterior.map((item) =>
-          item.id === produto.id
-            ? { ...item, quantidade: item.quantidade + 1 }
-            : item
-        );
-      } else {
-        return [...itemAnterior, { ...produto, quantidade: 1 }];
-      }
-    });
-  };
+  // const handleAddCarrinho = (produto) => {
+  //   setCarrinhoItem((itemAnterior) => {
+  //     const existe = itemAnterior.find((item) => item.id === produto.id);
+  //     if (existe) {
+  //       return itemAnterior.map((item) =>
+  //         item.id === produto.id
+  //           ? { ...item, quantidade: item.quantidade + 1 }
+  //           : item
+  //       );
+  //     } else {
+  //       return [...itemAnterior, { ...produto, quantidade: 1 }];
+  //     }
+  //   });
+  // };
 
   const handleRemoveCarrinho = (produto) => {
     setCarrinhoItem((itemAnterior) =>
@@ -73,7 +74,7 @@ const App = () => {
       <div style={{ display: "flex", gap: "10px", margin: "20px" }}>
         <button
           style={{
-            width: "780px",
+            width: "810px",
             height: "720px",
             borderRadius: "30px",
             marginLeft: "250px",
@@ -105,7 +106,7 @@ const App = () => {
         
         <button
           style={{
-            width: "420px",
+            width: "520px",
             height: "370px",
             borderRadius: "30px",
             marginLeft: "10px",
@@ -167,7 +168,7 @@ const App = () => {
 
         <button
           style={{
-            width: "420px",
+            width: "520px",
             height: "370px",
             borderRadius: "30px",
             marginLeft: "-370px",
@@ -233,15 +234,7 @@ const App = () => {
           Fale conosco pelo WhatsApp
         </button>
       </div>
-      <CarrinhoOffCanvas
-        onRemoveCarrinho={handleRemoveCarrinho}
-        onUpdateCarrinho={handleUpdateCarrinho}
-        carrinhoItem={carrinhoItem}
-      />
-      
-      <div>
-        <Footer /> 
-      </div>
+
     </>
   );
 };

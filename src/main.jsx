@@ -26,7 +26,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <GlobalContext.Provider value={{ formatarMoeda }}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App />} />
+          <Route path="/carrinho" element={<App />} />
           <Route path="/login" element={<Login />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/gato" element={<Gato/>} />
