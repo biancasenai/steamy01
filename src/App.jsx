@@ -69,7 +69,7 @@ const App = () => {
   return (
     <>
       <Header contadorJogos={carrinhoItem.length} />
-      <img src={inicio} alt="" style={{ width: "2513px", height: "1000px" }} />
+      <img src={inicio} alt="" style={{ width: "2016px", height: "1000px" }} />
 
       <div style={{ display: "flex", gap: "10px", margin: "20px" }}>
         <button
@@ -200,7 +200,7 @@ const App = () => {
       <img
         src={inicio2}
         alt=""
-        style={{ width: "2513px", height: "1000px", marginTop: "100px" }}
+        style={{ width: "2016px", height: "1000px", marginTop: "100px" }}
       />
      
 

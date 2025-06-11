@@ -38,7 +38,7 @@ const PaginaInicial = () => {
             }}
           >
             <img
-              src={produto.imagemUrl || "https://via.placeholder.com/150"}
+              src={produto.imagemUrl || "https://placehold.co/150"}
               className="card-img-top"
               alt={produto.nome}
               style={{ height: "150px", objectFit: "cover" }}
