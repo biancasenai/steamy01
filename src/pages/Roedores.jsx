@@ -1,23 +1,22 @@
-import React from 'react'
-
+import React from 'react';
+import Header from '../components/Header';
 
 export const Roedores = () => {
   return (
-    
-<div>
-  <img
-  src="./src/img/coelho.png"
-  alt="Inicio"
-  style={{ width: "2545px", height: "1100px" }}
-  />
-  
-  <img
-  src="./src/img/coelhofim.png"
-  alt="Inicio"
-  style={{ width: "2545px", height: "1100px", marginTop:"100px" }}
-  />
+    <div>
+      <Header />
+      <img 
+        src="./src/img/Roedores.png" 
+        alt="Roedores" 
+        style={{ width: '100%', height: '1050px', display: 'block', marginBottom: '20px' }} 
+      />
+      <img 
+        src="./src/img/RoedoresFim.png" 
+        alt="RoedoresFim" 
+        style={{ width: '100%', height: '1050px', display: 'block', marginTop: '20px' }} 
+      />
+    </div>
+  );
+};
 
-</div>  
-)
-}
-export default Roedores
+export default Roedores;

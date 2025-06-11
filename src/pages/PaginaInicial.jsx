@@ -1,32 +1,56 @@
-import React, { useEffect, useState, useContext } from "react";
-import PromoCard from "../components/PromoCard.jsx";
-import { GlobalContext } from "../main.jsx";
+import React, { useEffect, useState } from "react";
 
-const PaginaInicial = (props) => {
-  const [aleatorio, setAleatorio] = useState([]);
-  const { formatarMoeda } = useContext(GlobalContext);
-
-  const games = React.useMemo;
+const PaginaInicial = () => {
+  const [produtos, setProdutos] = useState([]);
 
   useEffect(() => {
-    const aleatorioJogos = games
-      .filter((jogo) => jogo.desconto > 0)
-      //.sort((a, b) => b.desconto - a.desconto) //ordenação por desconto decrescente
-      .sort(() => Math.random() - 0.5) //ordenação aleatória
-      .slice(0, 3);
+    const fetchProdutos = async () => {
+      try {
+        const response = await fetch("https://localhost:7040/api/Oferta", {
+          headers: {
+            accept: "text/plain",
+          },
+        });
+        if (!response.ok) {
+          throw new Error("Erro ao buscar os produtos");
+        }
+        const data = await response.json();
+        setProdutos(data);
+      } catch (error) {
+        console.error("Erro ao buscar os produtos:", error);
+      }
+    };
 
-    setAleatorio(aleatorioJogos);
-  }, [games]);
+    fetchProdutos();
+  }, []);
 
   return (
     <div id="promotion" className="container w-75 my-4">
-      <div>
-        {/* mapeando um array com react */}
-        <img
-          src="../img/Inicio.png"
-          alt="cãoegato"
-          className="d-flex flex-wrap gap-4 justify-content-around"
-        />
+      <div className="d-flex flex-wrap gap-4 justify-content-around">
+        {produtos.map((produto) => (
+          <div
+            key={produto.id}
+            className="card"
+            style={{
+              width: "18rem",
+              border: "1px solid #ccc",
+              padding: "10px",
+            }}
+          >
+            <img
+              src={produto.imagemUrl || "https://placehold.co/150"}
+              className="card-img-top"
+              alt={produto.nome}
+              style={{ height: "150px", objectFit: "cover" }}
+            />
+            <div className="card-body">
+              <h5 className="card-title">{produto.nome}</h5>
+              <p className="card-text">Descrição: {produto.descricao}</p>
+              <p className="card-text">Preço: R$ {produto.preco.toFixed(2)}</p>
+              <p className="card-text">Desconto: {produto.desconto}%</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

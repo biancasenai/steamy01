@@ -15,6 +15,7 @@ import Roedores from "./pages/Roedores.jsx";
 import Aves from "./pages/Aves.jsx";
 import Footer from "./components/Footer.jsx";
 import Cachorro from "./pages/Cachorro.jsx";
+import Cadastro from "./pages/Cadastro.jsx";
 
 
 // Contexto global acessível a todas as rotas
@@ -32,6 +33,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/cachorro" element={<Cachorro/>} />
           <Route path="/aves" element={<Aves />} />
           <Route path="/roedores" element={<Roedores />} />
+          <Route path="/cadastro" element={<Cadastro />} />
         </Routes>
       </BrowserRouter>
     </GlobalContext.Provider>

@@ -88,16 +88,18 @@ const Header = (props) => {
             </div>
           </Link>
         )}
-    <i class="bi bi-telephone fs-4" style={{color:"#145C73"}}></i>
         <div className="position-relative">
+    <i className="bi bi-telephone fs-4" style={{color:"#145C73"}}> 
+          
+      </i>
           <i
-            role="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#carrinhoOffCanvas"
-            class="bi bi-bag fs-4"
-            style={{color:"#145C73"}}
-          ></i>
-
+  role="button"
+  data-bs-toggle="offcanvas"
+  data-bs-target="#carrinhoOffCanvas"
+  className="bi bi-bag fs-4"
+  style={{ color: "#145C73" }}
+>
+</i>
           {props.contadorJogos > 0 && (
             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
               {props.contadorJogos}

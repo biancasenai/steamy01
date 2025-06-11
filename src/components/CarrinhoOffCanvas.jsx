@@ -27,8 +27,7 @@ const CarrinhoOffCanvas = (props) => {
         style={{ background: "#1b2838" }}
       >
         <h5 className="offcanvas-title">
-          {" "}
-          <i class="bi bi-bag"></i> Sacola
+          <i className="bi bi-bag"></i> Sacola
         </h5>
         <i
           role="button"
