@@ -24,10 +24,13 @@ const Header = (props) => {
   };
 
   return (
-    <header className="w-100 navbar navbar justify-content-around align-items-center" style={{ backgroundColor: "#7FB0CB" }}>
+    <header
+      className="w-100 navbar navbar justify-content-around align-items-center"
+      style={{ backgroundColor: "#7FB0CB" }}
+    >
       <div id="info" className="d-flex gap-5 w-50 justify-content-between">
         <div id="logo" role="button" className="d-flex align-items-center me-5">
-          <img src="./src/img/logo.png" alt="Logo" className="img-fluid" />
+          <img src={Logo} alt="Logo" className="img-fluid" />
         </div>
 
         <input
@@ -65,12 +68,19 @@ const Header = (props) => {
                   height="40"
                 />
               </div>
-              <ul className="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="dropdownPerfil">
+              <ul
+                className="dropdown-menu dropdown-menu-dark dropdown-menu-end"
+                aria-labelledby="dropdownPerfil"
+              >
                 <li>
                   <button
                     className="dropdown-item"
                     onClick={() => {
-                      if (window.confirm("Tem certeza que deseja sair da sua conta?")) {
+                      if (
+                        window.confirm(
+                          "Tem certeza que deseja sair da sua conta?"
+                        )
+                      ) {
                         deletarConta(Usuario?.id);
                       }
                     }}
@@ -88,12 +98,21 @@ const Header = (props) => {
               role="button"
               className="d-flex gap-3 justify-content-center align-items-center text-decoration-none text-light"
             >
-              <i className="bi bi-person-circle fs-3" style={{ color: "#145C73" }}></i>
-              <div className="d-none d-md-flex flex-column m-0 w-50" style={{ color: "#145C73" }}>
+              <i
+                className="bi bi-person-circle fs-3"
+                style={{ color: "#145C73" }}
+              ></i>
+              <div
+                className="d-none d-md-flex flex-column m-0 w-50"
+                style={{ color: "#145C73" }}
+              >
                 <span className="h6 m-0">Login cadastrar-se</span>
               </div>
             </Link>
-            <i className="bi bi-telephone fs-4" style={{ color: "#145C73" }}></i>
+            <i
+              className="bi bi-telephone fs-4"
+              style={{ color: "#145C73" }}
+            ></i>
             <i
               role="button"
               data-bs-toggle="offcanvas"
