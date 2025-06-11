@@ -16,6 +16,7 @@ import Aves from "./pages/Aves.jsx";
 import Footer from "./components/Footer.jsx";
 import Cachorro from "./pages/Cachorro.jsx";
 import Cadastro from "./pages/Cadastro.jsx";
+import CarrinhoPage from "./pages/CarrinhoPage.jsx";
 
 
 // Contexto global acessível a todas as rotas
@@ -26,7 +27,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <GlobalContext.Provider value={{ formatarMoeda }}>
       <BrowserRouter>
         <Routes>
-          <Route path="/carrinho" element={<App />} />
+          <Route path="/" element={<App />} />
           <Route path="/login" element={<Login />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/gato" element={<Gato/>} />
@@ -34,6 +35,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/aves" element={<Aves />} />
           <Route path="/roedores" element={<Roedores />} />
           <Route path="/cadastro" element={<Cadastro />} />
+          <Route path="/carrinho" element={<CarrinhoPage />} />
+
         </Routes>
       </BrowserRouter>
     </GlobalContext.Provider>

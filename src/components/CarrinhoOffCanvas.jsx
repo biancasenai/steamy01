@@ -1,10 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router";
 import { GlobalContext } from "../main.jsx";
 
 const CarrinhoOffCanvas = (props) => {
   const navigate = useNavigate();
   const { formatarMoeda } = useContext(GlobalContext);
+
+  const [carrinho, setCarrinho] = useState(() => {
+    const carrinhoSalvo = localStorage.getItem("devcarrinho");
+    return carrinhoSalvo ? JSON.parse(carrinhoSalvo) : [];
+  });
 
   const total = props.carrinhoItem.reduce(
     (acc, item) =>
@@ -43,87 +48,46 @@ const CarrinhoOffCanvas = (props) => {
       </div>
 
       <div className="offcanvas-body">
-        {props.carrinhoItem.length === 0 ? (
-          <p className="text-center text-light">Seu carrinho está vazio.</p>
-        ) : (
-          <>
-            <ul className="list-group list-group-flush">
-              {props.carrinhoItem.map((item) => (
-                <li
-                  key={item.id}
-                  className="px-4 py-3 shadow mt-3 d-flex gap-3 rounded "
-                  style={{ background: "#d9d9d9" }}
-                >
-                  <img
-                    className="object-fit-cover rounded-2"
-                    src={item.imagem}
-                    alt={item.titulo}
-                    width={60}
-                    height={80}
-                  />
-                  <div className="w-100">
-                    <div className="d-flex justify-content-between">
-                      <h6 className="fw-bold p-1">{item.titulo}</h6>
-                      <i
-                        role="button"
-                        className="bi bi-trash fs-5 text-danger"
-                        onClick={() => props.onRemoveCarrinho(item)}
-                      ></i>
-                    </div>
-
-                    <div className="d-flex justify-content-between">
-                      <div className="border border-dark-subtle border-1 d-flex align-items-center rounded-4 gap-2">
-                        <button
-                          className="btn border-0"
-                          disabled={item.quantidade === 1}
-                          onClick={() =>
-                            props.onUpdateCarrinho(item, item.quantidade - 1)
-                          }
-                        >
-                          -
-                        </button>
-                        <span>{item.quantidade}</span>
-                        <button
-                          className="btn border-0"
-                          onClick={() =>
-                            props.onUpdateCarrinho(item, item.quantidade + 1)
-                          }
-                        >
-                          
-                        </button>
-                      </div>
-
-                      <div className="d-flex flex-column align-items-end">
-                        <span className="text-decoration-line-through small">
-                          {formatarMoeda(item.preco)}
-                        </span>
-                        <span className="fw-bolder">
-                          {formatarMoeda(
-                            item.preco - (item.preco * item.desconto) / 100
-                          )}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-
-            <hr className="text-white" />
-            <div className="d-flex justify-content-between text-light fs-4">
-              <strong>Total:</strong>
-              <strong>{formatarMoeda(total)}</strong>
+        {props.carrinho.length > 0 ? (
+          props.carrinho.map((item) => (
+            <div key={item.id} className="mb-3">
+              <div className="d-flex justify-content-between">
+                <h6 className="fw-bold p-1">{item.titulo}</h6>
+                <i
+                  role="button"
+                  className="bi bi-trash fs-5 text-danger"
+                  onClick={() => props.onRemoveCarrinho(item)}
+                ></i>
+              </div>
+              <div className="d-flex justify-content-between">
+                <div className="border border-dark-subtle border-1 d-flex align-items-center rounded-4 gap-2">
+                  <button
+                    className="btn border-0"
+                    disabled={item.quantidade === 1}
+                    onClick={() =>
+                      props.onUpdateCarrinho(item, item.quantidade - 1)
+                    }
+                  >
+                    -
+                  </button>
+                  <span>{item.quantidade}</span>
+                  <button
+                    className="btn border-0"
+                    onClick={() =>
+                      props.onUpdateCarrinho(item, item.quantidade + 1)
+                    }
+                  >
+                    +
+                  </button>
+                </div>
+                <div className="d-flex flex-column align-items-end">
+                  <span className="fw-bold">R$ {item.preco}</span>
+                </div>
+              </div>
             </div>
-            <button
-              id="addCarrinho"
-              className="btn btn-success desconto text-light border-0 w-100 mt-2 fs-5"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#carrinhoOffCanvas"
-              onClick={goToCheckout}
-            >
-              Finalizar Compra
-            </button>
-          </>
+          ))
+        ) : (
+          <p>Seu carrinho está vazio.</p>
         )}
       </div>
     </div>

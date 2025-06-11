@@ -196,6 +196,7 @@ const App = () => {
           Roedores
   </span>
         </button>
+        
       </div>
       <img
         src={inicio2}

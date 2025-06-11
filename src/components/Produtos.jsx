@@ -4,24 +4,29 @@ const Produtos = () => {
   const [produtos, setProdutos] = useState([]);
 
   useEffect(() => {
-    fetch('https://localhost:7040/api/Produtos', {
-      method: 'GET',
-      headers: {
-        'accept': 'text/plain',
-      },
-    })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`Erro na requisição: ${response.status}`);
+    const buscarDados = async () => {
+      const dadosTotais = [];
+
+      try {
+        const resProdutos = await fetch('https://localhost:7040/api/Produtos');
+        if (resProdutos.ok) {
+          const produtos = await resProdutos.json();
+          dadosTotais.push(...produtos);
         }
-        return response.json();
-      })
-      .then(data => {
-        setProdutos(data);
-      })
-      .catch(error => {
-        console.error("Erro ao buscar produtos:", error);
-      });
+      } catch {}
+
+      try {
+        const resItens = await fetch('https://localhost:7040/api/Itens');
+        if (resItens.ok) {
+          const itens = await resItens.json();
+          dadosTotais.push(...itens);
+        }
+      } catch {}
+
+      setProdutos(dadosTotais);
+    };
+
+    buscarDados();
   }, []);
 
   return (
@@ -31,11 +36,17 @@ const Produtos = () => {
         {produtos.map(prod => (
           <div key={prod.id} className="col-md-4 mb-4">
             <div className="card h-100">
-              <img src={prod.imagemUrl} className="card-img-top" alt={prod.nome} />
+              <img
+                src={prod.imagemUrl || "https://via.placeholder.com/300"}
+                className="card-img-top"
+                alt={prod.nome || "Produto"}
+              />
               <div className="card-body">
-                <h5 className="card-title">{prod.nome}</h5>
-                <p className="card-text">{prod.descricao}</p>
-                <p className="card-text"><strong>Preço:</strong> R$ {prod.preco}</p>
+                <h5 className="card-title">{prod.nome || "Sem nome"}</h5>
+                <p className="card-text">{prod.descricao || "Sem descrição"}</p>
+                <p className="card-text">
+                  <strong>Preço:</strong> R$ {prod.preco?.toFixed(2) || "0,00"}
+                </p>
               </div>
             </div>
           </div>
